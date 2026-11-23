@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>نور الإسلام — القرآن الكريم والأذان بدون إنترنت</title>
+
+  <!-- بطاقة المعاينة الرسمية في واتساب وفيسبوك وتليجرام -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="نور الإسلام" />
+  <meta property="og:title" content="تطبيق نور الإسلام — رفيقك اليومي للعبادة 🕌✨" />
+  <meta property="og:description" content="القرآن الكريم • موسوعة الحديث الشريف • مواقيت الصلاة والأذان الدقيق • الأذكار والمكتبة الإسلامية (يعمل بدون إنترنت)" />
+  <meta property="og:url" content="https://noor-al-islam-app.github.io/" />
+  <meta property="og:image" content="https://noor-al-islam-app.github.io/icon.png" />
+
+  <link rel="icon" type="image/png" href="./icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&display=swap" rel="stylesheet" />  <style>
+    :root {
+      --emerald-dark: #04241B;
+      --emerald-mid: #17665A;
+      --gold: #D4AF37;
+      --gold-light: #F3DC89;
+      --paper: #FAF5ED;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(160deg, var(--emerald-dark) 0%, #0A382D 55%, var(--emerald-mid) 100%);
+      color: var(--paper);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      width: 100%;
+      max-width: 460px;
+      background: var(--paper);
+      color: var(--emerald-dark);
+      border-radius: 28px;
+      border: 2px solid var(--gold);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+    }
+    .hero {
+      background: linear-gradient(135deg, var(--emerald-dark), var(--emerald-mid));
+      color: #fff;
+      text-align: center;
+      padding: 28px 20px 24px;
+      border-bottom: 2px solid var(--gold);
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.18);
+      color: var(--gold-light);
+      border: 1px solid var(--gold);
+      border-radius: 999px;
+      padding: 4px 14px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .hero h1 {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+    }
+    .hero p {
+      font-size: 13.5px;
+      opacity: 0.92;
+      line-height: 1.6;
+    }
+    .body {
+      padding: 22px 20px 24px;
+      text-align: center;
+    }
+    .arch-info {
+      background: #EBF5F1;
+      border: 1px solid rgba(23, 102, 90, 0.28);
+      border-radius: 14px;
+      padding: 10px 12px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--emerald-dark);
+      margin-bottom: 16px;
+    }
+    .btn-primary {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, var(--emerald-dark), var(--emerald-mid));
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 900;
+      padding: 15px 18px;
+      border-radius: 16px;
+      border: 1.5px solid var(--gold);
+      box-shadow: 0 8px 20px rgba(4, 36, 27, 0.25);
+      transition: transform 0.15s ease;
+    }
+    .btn-primary:active { transform: scale(0.98); }
+    .btn-disabled {
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    .alt-link {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 12.5px;
+      color: var(--emerald-mid);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+    .notes-box {
+      display: none;
+      text-align: right;
+      background: #fff;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 16px;
+      padding: 12px 14px;
+      margin-top: 16px;
+      font-size: 13px;
+      line-height: 1.75;
+      white-space: pre-line;
+    }
+    .notes-title {
+      color: var(--emerald-mid);
+      font-weight: 900;
+      margin-bottom: 4px;
+      font-size: 13.5px;
+    }
+    .steps {
+      text-align: right;
+      margin-top: 18px;
+      background: #F4ECDC;
+      border-radius: 16px;
+      padding: 12px 14px;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+    .steps strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--emerald-dark);
+      font-size: 13px;
+    }
+    .steps ol { padding-right: 18px; }
+    .ios-warn {
+      display: none;
+      background: #FFF3CD;
+      color: #664D03;
+      border: 1px solid #FFECB5;
+      border-radius: 12px;
+      padding: 10px;
+      font-size: 12.5px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="hero">
+      <div class="badge" id="versionBadge">تطبيق أندرويد مجاني بدون إنترنت</div>
+      <h1>نور الإسلام</h1>
+      <p>القرآن الكريم • موسوعة الحديث الشريف • مواقيت الصلاة والأذان • الأذكار والمكتبة الإسلامية</p>
+    </div>
+
+    <div class="body">
+      <div class="ios-warn" id="iosWarn">
+        التطبيق متاح حالياً لهواتف أندرويد فقط (Android).
+      </div>
+
+      <div class="arch-info" id="archInfo">
+        جاري فحص النسخة المناسبة لهاتفك...
+      </div>
+
+      <a id="mainBtn" class="btn-primary btn-disabled" href="#">
+        جاري تجهيز رابط التحميل...
+      </a>
+
+      <a id="altBtn" class="alt-link" href="#" style="display:none;"></a>
+
+      <div class="notes-box" id="notesBox">
+        <div class="notes-title">✨ الجديد في هذا الإصدار:</div>
+        <div id="notesText"></div>
+      </div>
+
+      <div class="steps">
+        <strong>طريقة التثبيت (لأول مرة فقط):</strong>
+        <ol>
+          <li>اضغط زر التحميل أعلاه وانتظر اكتمال تنزيل الملف.</li>
+          <li>افتح الملف؛ وإذا ظهرت رسالة أمان اضغط <b>الإعدادات</b> ثم فعّل <b>السماح من هذا المصدر</b>.</li>
+          <li>اضغط <b>تثبيت</b> — بعدها سيتحدث التطبيق تلقائياً من داخله عند كل إصدار جديد.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function detectArch() {
+      try {
+        if (navigator.userAgentData && navigator.userAgentData.getHighEntropyValues) {
+          const info = await navigator.userAgentData.getHighEntropyValues(['architecture', 'bitness']);
+          if (info.bitness === '32') return 'armeabi-v7a';
+          if (info.bitness === '64') return 'arm64-v8a';
+        }
+      } catch (_) {}
+      const ua = (navigator.userAgent || '').toLowerCase();
+      if (ua.includes('arm64') || ua.includes('aarch64') || ua.includes('armv8')) return 'arm64-v8a';
+      if (ua.includes('armv7') || ua.includes('armeabi')) return 'armeabi-v7a';
+      return 'arm64-v8a';
+    }
+
+    async function init() {
+      const ua = navigator.userAgent || '';
+      if (/iPhone|iPad|iPod/i.test(ua)) {
+        document.getElementById('iosWarn').style.display = 'block';
+      }
+
+      const arch = await detectArch();
+      const archInfo = document.getElementById('archInfo');
+      const mainBtn = document.getElementById('mainBtn');
+      const altBtn = document.getElementById('altBtn');
+
+      try {
+        const res = await fetch('./version.json?t=' + Date.now(), { cache: 'no-store' });
+        if (!res.ok) throw new Error('no_version');
+        const data = await res.json();
+
+        document.getElementById('versionBadge').textContent =
+          'الإصدار ' + (data.version_name || '1.0.0') + ' • أندرويد';
+
+        const apks = data.apks || {};
+        const is32 = arch === 'armeabi-v7a' && apks['armeabi-v7a'];
+        const primaryUrl = is32 ? apks['armeabi-v7a'] : (apks['arm64-v8a'] || apks['universal'] || '#');
+        const fallbackUrl = is32 ? apks['arm64-v8a'] : apks['armeabi-v7a'];
+
+        archInfo.textContent = is32
+          ? 'تم اختيار نسخة الهواتف الاقتصادية/القديمة (32-bit) تلقائياً'
+          : 'تم اختيار النسخة الحديثة المناسبة لهاتفك (64-bit) تلقائياً';
+
+        mainBtn.href = primaryUrl;
+        mainBtn.textContent = '⬇️ تحميل تطبيق نور الإسلام الآن';
+        mainBtn.classList.remove('btn-disabled');
+
+        if (fallbackUrl) {
+          altBtn.href = fallbackUrl;
+          altBtn.style.display = 'inline-block';
+          altBtn.textContent = is32
+            ? 'أو حمّل نسخة الهواتف الحديثة (64-bit)'
+            : 'لم يعمل التثبيت؟ حمّل نسخة الهواتف القديمة (32-bit)';
+        }
+
+        if (data.notes) {
+          document.getElementById('notesText').textContent = data.notes;
+          document.getElementById('notesBox').style.display = 'block';
+        }
+      } catch (_) {
+        archInfo.textContent = 'الصفحة جاهزة — في انتظار رفع أول إصدار من التطبيق.';
+        mainBtn.textContent = 'قريباً — جاري تجهيز الإصدار الأول';
+      }
+    }
+
+    init();
+  </script>
+</body>
+</html>
