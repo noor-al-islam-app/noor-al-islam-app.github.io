@@ -12,11 +12,19 @@
   <meta property="og:description" content="القرآن الكريم • موسوعة الحديث الشريف • مواقيت الصلاة والأذان الدقيق • الأذكار والمكتبة الإسلامية (يعمل بدون إنترنت)" />
   <meta property="og:url" content="https://noor-al-islam-app.github.io/" />
   <meta property="og:image" content="https://noor-al-islam-app.github.io/1.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="تطبيق نور الإسلام — رفيقك اليومي للعبادة 🕌✨" />
+  <meta name="twitter:description" content="القرآن الكريم • موسوعة الحديث الشريف • مواقيت الصلاة والأذان الدقيق • الأذكار (بدون إنترنت)" />
+  <meta name="twitter:image" content="https://noor-al-islam-app.github.io/1.png" />
 
-  <link rel="icon" type="image/png" href="./icon.png" />
+  <link rel="icon" type="image/png" href="./1.png" />
+  <link rel="apple-touch-icon" href="./1.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&display=swap" rel="stylesheet" />  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
     :root {
       --emerald-dark: #04241B;
       --emerald-mid: #17665A;
@@ -24,7 +32,12 @@
       --gold-light: #F3DC89;
       --paper: #FAF5ED;
     }
-* { box-sizing: border-box; margin: 0; padding: 0; }    body {
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
       font-family: 'Cairo', sans-serif;
       background: linear-gradient(160deg, var(--emerald-dark) 0%, #0A382D 55%, var(--emerald-mid) 100%);
       color: var(--paper);
@@ -50,6 +63,16 @@
       text-align: center;
       padding: 28px 20px 24px;
       border-bottom: 2px solid var(--gold);
+    }
+    .app-icon {
+      display: block;
+      width: 82px;
+      height: 82px;
+      border-radius: 20px;
+      border: 2px solid var(--gold);
+      margin: 0 auto 12px;
+      object-fit: cover;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
     }
     .badge {
       display: inline-block;
@@ -101,7 +124,9 @@
       box-shadow: 0 8px 20px rgba(4, 36, 27, 0.25);
       transition: transform 0.15s ease;
     }
-    .btn-primary:active { transform: scale(0.98); }
+    .btn-primary:active {
+      transform: scale(0.98);
+    }
     .btn-disabled {
       opacity: 0.6;
       pointer-events: none;
@@ -147,7 +172,9 @@
       color: var(--emerald-dark);
       font-size: 13px;
     }
-    .steps ol { padding-right: 18px; }
+    .steps ol {
+      padding-right: 18px;
+    }
     .ios-warn {
       display: none;
       background: #FFF3CD;
@@ -164,7 +191,7 @@
 <body>
   <div class="card">
     <div class="hero">
-      <img src="./icon.png" style="width:76px;height:76px;border-radius:18px;border:2px solid #D4AF37;margin-bottom:10px;">
+      <img class="app-icon" src="./1.png" alt="أيقونة تطبيق نور الإسلام" />
       <div class="badge" id="versionBadge">تطبيق أندرويد مجاني بدون إنترنت</div>
       <h1>نور الإسلام</h1>
       <p>القرآن الكريم • موسوعة الحديث الشريف • مواقيت الصلاة والأذان • الأذكار والمكتبة الإسلامية</p>
