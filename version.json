@@ -1,0 +1,10 @@
+{
+  "release_number": 1,
+  "version_name": "1.0.0",
+  "force_update": false,
+  "notes": "• الإصدار الرسمي الأول من تطبيق نور الإسلام.\n• القرآن الكريم وموسوعة الحديث بدون إنترنت.\n• مواقيت الصلاة والأذان الدقيق وتنبيهات الأذكار.",
+  "apks": {
+    "arm64-v8a": "https://github.com/noor-al-islam-app/noor-al-islam-app.github.io/releases/download/v1.0.0/Noor-Al-Islam-v1.0.0.apk",
+    "armeabi-v7a": "https://github.com/noor-al-islam-app/noor-al-islam-app.github.io/releases/download/v1.0.0/Noor-Al-Islam-32bit-v1.0.0.apk"
+  }
+}
